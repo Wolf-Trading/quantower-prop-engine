@@ -1,0 +1,22 @@
+{
+  "Firm": "Topstep",
+  "Mode": "SemiAuto",
+  "EnableEntries": false,
+  "AccountStartBalance": 50000,
+  "FirmTrailDollars": 2000,
+  "FirmDailyLossLimit": 1000,
+  "FirmProfitTarget": 3000,
+  "ConsistencyCapPct": 0.5,
+  "RiskDollarsPerTrade": 100,
+  "DailyStopDollars": 500,
+  "DailyGoalDollars": 400,
+  "MaxContracts": 10,
+  "MaxTradesPerDay": 4,
+  "OpeningRangeMinutes": 15,
+  "PreferredSymbols": ["MNQ", "MES"],
+  "FlattenHour": 15,
+  "FlattenMinute": 50,
+  "LastEntryHour": 15,
+  "LastEntryMinute": 30,
+  "Notes": "EOD trail. Daily stop is 50% of firm DLL. Confirm current Topstep rules and whether Strategy Runner is available on your connection."
+}

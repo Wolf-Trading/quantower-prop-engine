@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>PropEngine.Quantower</RootNamespace>
+    <AssemblyName>PropEngine.Quantower</AssemblyName>
+    <QuantowerLib Condition="'$(QuantowerLib)' == '' and Exists('$(QuantowerPath)\TradingPlatform.BusinessLayer.dll')">$(QuantowerPath)\TradingPlatform.BusinessLayer.dll</QuantowerLib>
+    <QuantowerLib Condition="'$(QuantowerLib)' == '' and Exists('C:\Quantower\TradingPlatform.BusinessLayer.dll')">C:\Quantower\TradingPlatform.BusinessLayer.dll</QuantowerLib>
+    <EnableQuantower Condition="'$(QuantowerLib)' != '' and Exists('$(QuantowerLib)')">true</EnableQuantower>
+    <EnableQuantower Condition="'$(EnableQuantower)' == ''">false</EnableQuantower>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PropEngine.Core\PropEngine.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(EnableQuantower)' == 'true'">
+    <Reference Include="TradingPlatform.BusinessLayer">
+      <HintPath>$(QuantowerLib)</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(EnableQuantower)' != 'true'">
+    <Compile Remove="**\*.cs" />
+    <None Include="**\*.cs" />
+  </ItemGroup>
+  <Target Name="WarnMissingQuantower" BeforeTargets="Build" Condition="'$(EnableQuantower)' != 'true'">
+    <Warning Text="TradingPlatform.BusinessLayer.dll not found. Set QuantowerPath or QuantowerLib to your Quantower install. Core project still builds." />
+  </Target>
+</Project>

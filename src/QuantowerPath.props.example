@@ -1,0 +1,7 @@
+<Project>
+  <PropertyGroup>
+    <!-- Copy to QuantowerPath.props (gitignored) or pass -p:QuantowerLib=... -->
+    <QuantowerPath>C:\Quantower</QuantowerPath>
+    <QuantowerLib>C:\Quantower\TradingPlatform.BusinessLayer.dll</QuantowerLib>
+  </PropertyGroup>
+</Project>

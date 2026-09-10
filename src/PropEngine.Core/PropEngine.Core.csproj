@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>PropEngine.Core</RootNamespace>
+    <AssemblyName>PropEngine.Core</AssemblyName>
+    <Description>Prop-firm risk engine and VWAP/Opening-Range signal core. No Quantower dependency.</Description>
+  </PropertyGroup>
+</Project>

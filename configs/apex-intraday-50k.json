@@ -1,0 +1,17 @@
+{
+  "Firm": "ApexIntraday",
+  "Mode": "SemiAuto",
+  "EnableEntries": false,
+  "AccountStartBalance": 50000,
+  "FirmTrailDollars": 2000,
+  "FirmDailyLossLimit": 1000,
+  "RiskDollarsPerTrade": 70,
+  "DailyStopDollars": 350,
+  "DailyGoalDollars": 300,
+  "MaxContracts": 6,
+  "MaxTradesPerDay": 3,
+  "IntradayTrailHeadroomPct": 0.3,
+  "RewardRisk": 1.3,
+  "PreferredSymbols": ["MNQ", "MES"],
+  "Notes": "Intraday trail punishes runners. Scale out faster, smaller size, flatten if open risk eats headroom."
+}

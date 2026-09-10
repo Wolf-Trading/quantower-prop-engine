@@ -1,0 +1,18 @@
+{
+  "Firm": "ApexEod",
+  "Mode": "SemiAuto",
+  "EnableEntries": false,
+  "AccountStartBalance": 50000,
+  "FirmTrailDollars": 2000,
+  "FirmDailyLossLimit": 1000,
+  "FirmProfitTarget": 3000,
+  "ConsistencyCapPct": 0.5,
+  "RiskDollarsPerTrade": 80,
+  "DailyStopDollars": 450,
+  "DailyGoalDollars": 350,
+  "MaxContracts": 10,
+  "MaxTradesPerDay": 4,
+  "OpeningRangeMinutes": 15,
+  "PreferredSymbols": ["MNQ", "MES"],
+  "Notes": "Prefer Apex EOD products so open winners do not lift the floor tick-by-tick. Apex official prohibited-activities page has banned full automation at times — keep SemiAuto and get written confirmation."
+}
