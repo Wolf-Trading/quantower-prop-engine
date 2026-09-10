@@ -1,0 +1,14 @@
+bin/
+obj/
+.vs/
+.idea/
+*.user
+*.suo
+*.dll
+*.pdb
+artifacts/
+journals/
+*.csv
+!samples/**
+.DS_Store
+QuantowerPath.props
